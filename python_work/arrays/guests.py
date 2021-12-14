@@ -35,6 +35,8 @@ guests.pop(-1)
 guests.pop(1)
 print(guests)
 
-del guests[0]
-del guests[0]
+#del guests[0]
+#del guests[0]
 print(guests)
+
+print("Количество гостей равно " + str(len(guests)))
