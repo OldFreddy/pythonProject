@@ -1,0 +1,5 @@
+array = list(range(1,10))
+print(array)
+print(array[0:3])
+print(array[3:6])
+print(array[6:])
