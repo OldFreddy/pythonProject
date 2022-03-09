@@ -1,10 +1,10 @@
 user_0 = {
-    'username': 'efermi',
-    'first': 'enrico',
+    'username':'efermi',
+    'first': 'enriko',
     'last': 'fermi',
+
 }
-for key, value in user_0.items():
-    print(f"\nKey:{key}")
-    print(f"Value:{value}")
 
-
+for key,value in user_0.items():
+    print(f'\nKey: {key}')
+    print(f'Value: {value}')
