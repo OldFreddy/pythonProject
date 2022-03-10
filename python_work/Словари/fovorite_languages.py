@@ -61,3 +61,30 @@ favorite_languages = {
 
 for name in sorted(favorite_languages.keys()):
     print(f"{name}, thank you")
+
+print('\n_________________________________')
+
+#Перебор значений в словаре
+
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python'
+    }
+
+print("The following languages have ben mentioned:")
+for language in favorite_languages.values():
+    print(language.title())
+
+print('\n_________________________________')
+
+for language in sorted(favorite_languages.values()):
+    print(language.title())
+print('\n_________________________________')
+for language in set(favorite_languages.values()):
+    print(language.title())
+
+print('\n_________________________________')
+for language in sorted(set(favorite_languages.values())):
+    print(language.title())
