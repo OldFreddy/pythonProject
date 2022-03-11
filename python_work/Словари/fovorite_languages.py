@@ -88,3 +88,13 @@ for language in set(favorite_languages.values()):
 print('\n_________________________________')
 for language in sorted(set(favorite_languages.values())):
     print(language.title())
+
+print('\n_________________________________')
+
+people = ['phil', 'sarah', 'vova', 'nikitos']
+
+for human in people:
+    if human in favorite_languages.keys():
+        print(f'Hello {human.title()}, ty for oprose')
+    else:
+        print(f'Hello {human}, lets oprose')

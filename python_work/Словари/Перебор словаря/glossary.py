@@ -22,3 +22,22 @@ glossary = {
 
 for key, value in glossary.items():
     print(f'{key} - это {value}')
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
