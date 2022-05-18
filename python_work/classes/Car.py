@@ -44,6 +44,10 @@ class Battery():
         """Выводит информацию о мощности аккумулятора"""
         print(f"This car has a {self.battery_size}-kWh battery")
 
+    def update_battery(self):
+        if self.battery_size <= 75:
+            self.battery_size = 100
+
     def get_range(self):
         """Выводит приблизительный запас хода аккумулятора"""
         if self.battery_size == 75:
@@ -62,9 +66,9 @@ class Electro_Car(Car):
         super().__init__(make, model, year)
         self.battery = Battery()
 
-    def describe_battery(self):
-        """Выводит информацию о мощности аккумуляторов"""
-        print(f"This car has a {self.battery} kWh battery")
+    # def describe_battery(self):
+    #     """Выводит информацию о мощности аккумуляторов"""
+    #     print(f"This car has a {self.battery} kWh battery!!!!!")
 
     def fill_gas_tank(self):
         """У электромобиля нет бензобака"""
@@ -73,7 +77,9 @@ class Electro_Car(Car):
 
 my_tesla = Electro_Car('tesla', 'model s', 2019)
 print(my_tesla.get_descriptive_name())
-my_tesla.describe_battery()
+# my_tesla.describe_battery()
 my_tesla.fill_gas_tank()
 my_tesla.battery.describe_battery()
+my_tesla.battery.get_range()
+my_tesla.battery.update_battery()
 my_tesla.battery.get_range()

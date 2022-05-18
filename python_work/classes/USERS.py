@@ -1,5 +1,6 @@
 class User():
     """Простой класс, описывающий пользователя"""
+
     def __init__(self, first_name, last_name, country, color, age, login_attempts=0):
         self.first_name = first_name
         self.last_name = last_name
@@ -24,6 +25,21 @@ class User():
         self.login_attempts = 0
 
 
+class Admin(User):
+    def __init__(self, first_name, last_name, country, color, age):
+        super().__init__(first_name, last_name, country, color, age)
+        self.privileges = Privileges()
+
+
+class Privileges():
+    def __init__(self):
+        self.privileges = ["разрешено добавлять сообщения", "разрешено удалять пользователей",
+                           "разрешено банить пользователей"]
+
+    def show_privileges(self):
+        print(self.privileges)
+
+
 # user1 = User("SASHA", "VJHOPEDYRKA", "Russia", "WHITE", 26)
 # user1.describe_user()
 # user1.greet_user()
@@ -33,3 +49,7 @@ new_user.increment_attempts()
 print(new_user.login_attempts)
 new_user.reset_login_attemps()
 print(new_user.login_attempts)
+
+admin_user = Admin("Lesha", "Maksimov", "Russia", "White", "32")
+admin_user.describe_user()
+admin_user.privileges.show_privileges()
